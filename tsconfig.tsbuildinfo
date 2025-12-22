@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/game_phaser/config.ts","./src/components/store/gamestore.ts","./src/components/types/game.types.ts"],"version":"5.9.3"}

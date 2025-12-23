@@ -40,3 +40,80 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Navigation */
+.top-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.top-nav a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Login styles replaced by Tailwind utilities */
+/* styles moved to component classes (Tailwind) */
+
+/* Cyberpunk utilities */
+.cyber-bg {
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(255,0,222,0.06), transparent 10%),
+    radial-gradient(ellipse at 90% 90%, rgba(0,224,255,0.05), transparent 10%),
+    linear-gradient(180deg,#03030a 0%, #071227 60%);
+  min-height: 100%;
+  background-size: cover;
+  color: #E6F7FF;
+  position: relative;
+  overflow: hidden;
+}
+.neon-text {
+  text-shadow: 0 0 8px rgba(255,0,222,0.85), 0 0 24px rgba(0,224,255,0.35);
+}
+.neon-panel {
+  border: 1px solid rgba(0,224,255,0.12);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,0,222,0.06);
+  backdrop-filter: blur(6px);
+  position: relative;
+}
+.neon-panel::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg,#ff00de, #00e0ff);
+  filter: blur(30px);
+  opacity: 0.22;
+  z-index: -1;
+  border-radius: inherit;
+}
+@keyframes scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: .08; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+.scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.02), transparent);
+  z-index: 0;
+  animation: scan 6s linear infinite;
+  pointer-events: none;
+}
+@keyframes flicker {
+  0% { opacity: 1 }
+  5% { opacity: 0.85 }
+  7% { opacity: 1 }
+  10% { opacity: 0.9 }
+  100% { opacity: 1 }
+}
+.neon-flicker {
+  animation: flicker 3s linear infinite;
+}
+.shadow-neon {
+  box-shadow: 0 8px 30px rgba(0,224,255,0.08), 0 0 18px rgba(255,0,222,0.08);
+}
